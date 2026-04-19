@@ -28,6 +28,7 @@ agregar con el botón o presionando `Enter`.
 
 ## 2. Estructura del proyecto
 
+```javascript
 practica-03/
 ├── index.html              → Estructura HTML completa
 ├── css/
@@ -41,6 +42,7 @@ practica-03/
 │   ├── 04-contador.png
 │   └── 05-completadas.png
 └── README.md
+```
 
 ---
 

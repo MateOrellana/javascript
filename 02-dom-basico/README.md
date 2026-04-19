@@ -24,6 +24,7 @@ La aplicación gestiona una lista de tareas/elementos con las siguientes funcion
 
 ## 2. Estructura del proyecto
 
+```javascript
 practica-02/
 ├── index.html          → Estructura base HTML
 ├── css/
@@ -34,6 +35,7 @@ practica-02/
 │   ├── 01-vista-general.png
 │   └── 02-filtrado.png
 └── README.md
+```
 
 ---
 

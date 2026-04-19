@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f0f1a;
+  color: #e0e0e0;
+  min-height: 100vh;
+  padding: 30px 20px;
+}
+
+/* ── Página ── */
+.page {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ── Contenedor ── */
+.container {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border: 1px solid #2a2a4a;
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+}
+
+.container h1 {
+  font-size: 1.5rem;
+  color: #a78bfa;
+  margin-bottom: 20px;
+}
+
+.container h2 {
+  font-size: 1.25rem;
+  color: #a78bfa;
+  margin-bottom: 20px;
+}
+
+/* ── Botones ── */
+.button-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.button-group button {
+  padding: 9px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: #4f46e5;
+  color: #fff;
+}
+
+.button-group button:hover:not(:disabled) {
+  background: #6d64f0;
+  transform: translateY(-1px);
+}
+
+.button-group button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── Log estilo terminal ── */
+.log {
+  background: #0a0a14;
+  border: 1px solid #2a2a4a;
+  border-radius: 8px;
+  padding: 14px;
+  min-height: 100px;
+  max-height: 220px;
+  overflow-y: auto;
+  font-family: 'Courier New', monospace;
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+
+.log-item {
+  padding: 2px 0;
+}
+
+.log-info    { color: #94a3b8; }
+.log-success { color: #4ade80; }
+.log-error   { color: #f87171; }
+.log-warning { color: #fbbf24; }
+
+/* ── Resultados comparativa ── */
+.resultados {
+  display: none;
+  margin-top: 16px;
+  padding: 16px 20px;
+  background: #0d2137;
+  border-left: 4px solid #4ade80;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  line-height: 2;
+}
+
+.resultados.visible {
+  display: block;
+}
+
+.resultados h3 {
+  color: #4ade80;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.resultados p strong {
+  color: #a78bfa;
+}
+
+/* ── Form group temporizador ── */
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.form-group input {
+  width: 90px;
+  padding: 8px 10px;
+  background: #0a0a14;
+  border: 1px solid #2a2a4a;
+  border-radius: 6px;
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  text-align: center;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #4f46e5;
+}
+
+/* ── Display temporizador ── */
+.display {
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+  color: #a78bfa;
+  letter-spacing: 6px;
+  margin: 10px 0 16px;
+  font-family: 'Courier New', monospace;
+  transition: color 0.3s;
+}
+
+.display.alerta {
+  color: #f87171;
+  animation: pulso 0.8s ease-in-out infinite;
+}
+
+@keyframes pulso {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+/* ── Barra de progreso ── */
+.progress-container {
+  background: #0a0a14;
+  border-radius: 50px;
+  height: 12px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  border: 1px solid #2a2a4a;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #4f46e5, #a78bfa);
+  border-radius: 50px;
+  transition: width 0.9s linear, background 0.3s;
+}
+
+.progress-bar.alerta {
+  background: linear-gradient(90deg, #dc2626, #f87171);
+}
+
+/* ── Scrollbar del log ── */
+.log::-webkit-scrollbar       { width: 6px; }
+.log::-webkit-scrollbar-track { background: #0a0a14; }
+.log::-webkit-scrollbar-thumb { background: #2a2a4a; border-radius: 3px; }
+
+/* ── Responsive ── */
+@media (max-width: 500px) {
+  .display { font-size: 2.8rem; }
+  .button-group { flex-direction: column; }
+  .button-group button { width: 100%; }
+}
