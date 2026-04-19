@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: #1a1a2e;
+}
+
+#app {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Info Estudiante ── */
+.info-estudiante,
+.estadisticas {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.info-estudiante h2,
+.estadisticas h2 {
+  font-size: 1.3rem;
+  color: #1a73e8;
+  margin-bottom: 10px;
+}
+
+.info-estudiante p,
+.estadisticas p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+}
+
+/* ── Filtros ── */
+.filtros {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-filtro {
+  padding: 8px 18px;
+  border: 2px solid #cbd5e0;
+  border-radius: 8px;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.btn-filtro:hover {
+  border-color: #1a73e8;
+  color: #1a73e8;
+}
+
+.btn-filtro-activo {
+  background-color: #1a3c6e;
+  color: #ffffff;
+  border-color: #1a3c6e;
+}
+
+/* ── Tarjetas ── */
+#contenedor-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  color: #1a73e8;
+  margin-bottom: 6px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* ── Badges ── */
+.badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.badge {
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.badge-categoria {
+  background-color: #e8f0fe;
+  color: #1a73e8;
+}
+
+.prioridad-alta   { background-color: #fde8e8; color: #c0392b; }
+.prioridad-media  { background-color: #fff3cd; color: #856404; }
+.prioridad-baja   { background-color: #e2e3e5; color: #495057; }
+
+.estado-activo   { background-color: #d4edda; color: #155724; }
+.estado-inactivo { background-color: #f8d7da; color: #721c24; }
+
+/* ── Acciones ── */
+.card-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-eliminar {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 7px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+
+.btn-eliminar:hover {
+  background-color: #c0392b;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .filtros {
+    justify-content: center;
+  }
+  .card {
+    padding: 16px;
+  }
+}
