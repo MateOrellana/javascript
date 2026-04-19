@@ -10,12 +10,12 @@
 
 ## 1. Descripción de la solución
 
-Esta práctica consiste en una aplicación web interactiva desarrollada con HTML, CSS y JavaScript puro, sin el uso de frameworks o librerías externas. La aplicación demuestra el manejo del DOM mediante la creación, renderizado y eliminación dinámica de elementos, así como el filtrado de datos por categoría.
+Esta práctica consiste en una aplicación web interactiva desarrollada con HTML, CSS y JavaScript. La aplicación demuestra el manejo del DOM mediante la creación, renderizado y eliminación dinámica de elementos, así como el filtrado de datos por categoría.
 
 La aplicación gestiona una lista de tareas/elementos con las siguientes funcionalidades:
 
 - Visualización de información del estudiante renderizada dinámicamente con JS
-- Estadísticas en tiempo real (total de elementos y elementos activos)
+- Estadísticas (total de elementos y elementos activos)
 - Filtrado de tarjetas por categoría mediante botones interactivos
 - Eliminación de elementos del array y actualización inmediata del DOM
 - Estilos visuales con badges de prioridad y estado
@@ -76,8 +76,7 @@ function renderizarLista(datos) {
 ```
 
 **¿Por qué este enfoque?**  
-Usar `createElement` en lugar de `innerHTML` es más seguro (evita inyección de código),
-más legible y prepara al desarrollador para trabajar con frameworks como React o Angular.
+Usar `createElement` en lugar de `innerHTML` es más seguro y más legible.
 
 ---
 
